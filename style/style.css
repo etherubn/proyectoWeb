@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+
+    .header__principal {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-block: 1rem;
+
+        .header__picture {
+            width: 25rem;
+        }
+
+        .header__navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+
+            .header__enlace {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                i {
+                    font-size: 2.5rem;
+                }
+
+                .header__text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .header__secondary {
+        display: flex;
+        background: rgba(36, 201, 201, 0.25);
+        justify-content: center;
+        align-items: center;
+        padding: 1.8rem;
+
+        .header__secondary_list {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            .header__secondary_enlace {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+
+                i {
+                    font-size: 3rem;
+                }
+
+                .header__secondary_text {
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+}
+
+.banner {
+    position: relative;
+    padding: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .banner__img {
+        background-image: url("../img/Delivering-Incredible-Moments.jpg");
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .banner__content {
+        border: 5px solid black;
+        border-radius: 1rem;
+        width: 50rem;
+        position: relative;
+
+        video {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+        }
+
+        .volume {
+            position: absolute;
+            font-size: 4rem;
+            top: 1rem;
+            right: 1rem;
+            color: white;
+        }
+
+        .play {
+            position: absolute;
+            color: white;
+            font-size: 6rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    h2 {
+        position: absolute;
+        bottom: 2rem;
+        text-transform: capitalize;
+        font-size: 2.5rem;
+        color: darkslategrey;
+        text-shadow: -1px -1px 0 #ffffff,
+            1px -1px 0 #ffffff,
+            -1px 1px 0 #ffffff,
+            1px 1px 0 #ffffff;
+    }
+}
+
+.main{
+    padding: 2rem 1rem;
+    text-align: center;
+    .main__title{
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+
+    .main__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        width: 100%;
+        gap: 1.5rem;
+        .main__card{
+           border: 1px solid rgba(0,0,0,0.125);
+           border-bottom-right-radius: 1rem;
+           border-bottom-left-radius: 1rem;
+           
+           .main__card_footer{
+            padding-block: 1rem;
+            h3{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+           }
+        }
+    }
+
+
+}
